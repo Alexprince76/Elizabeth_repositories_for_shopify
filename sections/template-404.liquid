@@ -7,7 +7,10 @@
   {% else %}
     {% assign shop_url = section.settings.button_url %}
   {% endif %}
-  <a href="{{ section.settings.button_url }}" class="btn-primary">{{ section.settings.button_label }}</a>
+  <button class="btn-primary">
+     <a href="{{ section.settings.button_url }}" >{{ section.settings.button_label }}</a>
+  </button>
+ 
 </div
 </div>
 {% schema %}
