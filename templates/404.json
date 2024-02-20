@@ -3,6 +3,8 @@
     "template": {
       "type": "template-404",
       "settings": {
+        "title": "404 Page",
+        "subtext_title": "Write Sub heading here.."
       }
     }
   },
