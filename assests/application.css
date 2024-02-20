@@ -548,17 +548,9 @@ video {
   visibility: collapse;
 }
 
-.relative {
-  position: relative;
-}
-
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-}
-
-.me-2 {
-  margin-inline-end: 0.5rem;
 }
 
 .me-auto {
