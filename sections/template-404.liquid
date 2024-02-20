@@ -2,6 +2,11 @@
   <h1 class="h1"> {{ section.settings.title }} </h1>
 <P class="h5">{{ section.settings.subtext_title }}</P>
 <div>
+  {% if section.settings.button_url == blank %}
+  {% assign shop_url = shop.secure_url %}  
+  {% else %}
+    {% assign shop_url = section.settings.button_url %}
+  {% endif %}
   <a href="{{ section.settings.button_url }}" class="btn-primary">{{ section.settings.button_label }}</a>
 </div
 </div>
