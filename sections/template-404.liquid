@@ -1,5 +1,5 @@
 <h1> {{ settings.title }} </h1>
-<P>{{ 'general.404.subtext_html' | t}}</P>
+<P>{{ settings.subtext_title }}</P>
 
 {% schema %}
   {
@@ -10,6 +10,12 @@
         "id": "title",
         "default":"404",
         "label": "404 Heading Title"
+      },
+      {
+        "type": "text",
+        "id": "subtext_title",
+        "default":"Write Sub heading here..",
+        "label": "404 Sub Heading Title"
       }
     ]
   }
