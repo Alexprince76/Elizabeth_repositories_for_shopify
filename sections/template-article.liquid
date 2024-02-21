@@ -4,7 +4,6 @@
 {% else %}
   <p>Error: Image not available</p>
 {% endif %}
-<img class="post-feature-img" src="{{ article.image.url | default: '' }}" alt="{{ article.image.alt | default: 'Alt Text' }}">
 
 {{ article.image | inspect }}
 
@@ -16,9 +15,3 @@
   <p>{{ article.author }}</p>
 </div>
 
-{% schema %}
-{
-  "name": "Section name",
-  "settings": []
-}
-{% endschema %}
