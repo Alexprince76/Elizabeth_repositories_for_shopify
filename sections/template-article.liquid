@@ -1,14 +1,31 @@
-{% capture article_content %}
-  {{ article.content }}
-{% endcapture %}
-
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <h1 class="mb-4">{{ article.title }}</h1>
-      
-      <div class="article-content">
-        {{ article_content | remove: '<p>' | remove: '</p>' }}
+ <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .fullscreen-image {
+      background: url('{{ article.featured_image.src | img_url: 'master' }}') center/cover no-repeat;
+      height: 100%;
+    }
+    .container {
+      z-index: 1;
+      position: relative;
+    }
+  </style> 
+  
+<div class="fullscreen-image">
+  <!-- Optional: You can add an overlay here for better readability -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <h1 class="text-light mb-4">{{ article.title }}</h1>
+        
+        <div class="article-content text-light">
+          {{ article_content | remove: '<p>' | remove: '</p>' }}
+        </div>
       </div>
     </div>
   </div>
