@@ -15,7 +15,9 @@
       position: relative;
     }
   </style> 
-  
+  {% capture article_content %}
+  {{ article.content }}
+{% endcapture %}
 <div class="fullscreen-image">
   <!-- Optional: You can add an overlay here for better readability -->
   <div class="container mt-5">
