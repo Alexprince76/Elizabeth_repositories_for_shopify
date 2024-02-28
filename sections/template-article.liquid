@@ -1,7 +1,12 @@
 <!-- Dynamic Image Tag Generation -->
 {% if article.image %}
+  <!-- Debugging information -->
+  {{ article.image | inspect }}
+
+  <!-- Display image if available -->
   <img class="post-feature-img" src="{{ article.image | image_url: 'large' }}" alt="{{ article.image.alt }}">
 {% else %}
+  <!-- Display error message if image is not available -->
   <p>Error: Image not available</p>
 {% endif %}
 
