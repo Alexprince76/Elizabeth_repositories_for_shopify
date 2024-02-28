@@ -1,21 +1,15 @@
-<!-- Dynamic Image Tag Generation -->
-{% if article.image %}
-  <!-- Debugging information -->
-  {{ article.image | inspect }}
+<h1>{{ article.title }}</h1>
 
-  <!-- Display image if available -->
-  <img class="post-feature-img" src="{{ article.image | image_url: 'large' }}" alt="{{ article.image.alt }}">
-{% else %}
-  <!-- Display error message if image is not available -->
-  <p>Error: Image not available</p>
-{% endif %}
+<small>{{ article.author }}</small>
 
-{{ article.image | inspect }}
+<time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%Y-%m-%d' }}</time>
 
-<div class="container">
-  <div class="jumbotron">
-    <h1>{{ article.title }}</h1>
-  </div>
-  <p class="lead"> {{ article.content }} </p>
-  <p>{{ article.author }}</p>
-</div>
+<img src="{{ article.image | img_url: 'large'}}" alt="{{ article.image.alt }}">
+
+<div class="">{{ article.content }}</div>
+
+{% schema %}
+{
+  
+}
+{% endschema %}
